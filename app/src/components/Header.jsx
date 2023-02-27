@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react';
 
 import './header.scss'
 import logoIcon from '../assets/shared/logo.svg'
 
 const Header = () => {
+    const [page, setPage] = useState(0)
+
     return (
         <div id='header' className='fixed top-0 left-0 right-0 lg:top-8'>
             <div className='flex justify-between items-center h-24'>
@@ -41,20 +44,35 @@ const Header = () => {
                 {/* Tablet & Desktop */}
                 <div className="hidden sm:block h-full backdrop-blur bg-[white]/10 relative">
                     <div className='header-divider hidden lg:block bg-secondary/40'></div>
-                    <Link to='/' className='navtext h-full inline-flex items-center ml-12 mr-5 lg:ml-32 lg:mr-7
-                                            hover:border-b-2'>
+                    <Link to='/' 
+                        className={`navtext h-full inline-flex items-center ml-12 mr-5 lg:ml-32 lg:mr-7
+                                    hover:border-b-4 hover:border-b-primary/50
+                                    ${page === 0 ? 'border-b-primary border-b-4' : ''}`}
+                        onClick={() => {setPage(0)}}>
                         <span className='font-bold hidden lg:inline-block pr-3'>00</span> HOME
                     </Link>
-                    <Link to='/destination' className='navtext h-full inline-flex items-center mx-5 lg:mx-7
-                                            hover:border-b-2'>
+
+                    <Link to='/destination' 
+                        className={`navtext h-full inline-flex items-center mx-5 lg:mx-7
+                                    hover:border-b-4 hover:border-b-primary/50
+                                    ${page === 1 ? 'border-b-primary border-b-4' : ''}`}
+                        onClick={() => {setPage(1)}}>
                         <span className='font-bold hidden lg:inline-block pr-3'>01</span> DESTINATION
                     </Link>
-                    <Link to='/crew' className='navtext h-full inline-flex items-center mx-5 lg:mx-7
-                                            hover:border-b-2'>
+
+                    <Link to='/crew' 
+                        className={`navtext h-full inline-flex items-center mx-5 lg:mx-7
+                                    hover:border-b-4 hover:border-b-primary/50
+                                    ${page === 2 ? 'border-b-primary border-b-4' : ''}`}
+                        onClick={() => {setPage(2)}}>
                         <span className='font-bold hidden lg:inline-block pr-3'>02</span> CREW
                     </Link>
-                    <Link to='/technology' className='navtext h-full inline-flex items-center ml-5 mr-12 lg:ml-7 lg:mr-28
-                                            hover:border-b-2'>
+
+                    <Link to='/technology' 
+                        className={`navtext h-full inline-flex items-center ml-5 mr-12 lg:ml-7 lg:mr-28
+                                    hover:border-b-4 hover:border-b-primary/50
+                                    ${page === 3 ? 'border-b-primary border-b-4' : ''}`}
+                        onClick={() => {setPage(3)}}>
                         <span className='font-bold hidden lg:inline-block pr-3'>03</span> TECHNOLOGY
                     </Link>
                 </div>
