@@ -1,0 +1,18 @@
+#home {
+    background-image: url('../../assets/home/background-home-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 640px) {
+    #home {
+        background-image: url('../../assets/home/background-home-tablet.jpg');
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #home {
+        background-image: url('../../assets/home/background-home-desktop.jpg');
+    }
+}

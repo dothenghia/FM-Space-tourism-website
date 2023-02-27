@@ -13,7 +13,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.0);
     }
     &__close-btn {
         position: absolute;
@@ -26,20 +26,16 @@
         top: 0;
         bottom: 0;
         right: 0;
-        width: 260px;
-        background-color: rgba(0, 0, 0, 0.5);
+        width: 254px;
+        background-color: rgba(126, 126, 126, 0.1);
         transform: translateX(100%);
         transition: all 0.4s ease;
+
+        backdrop-filter: blur(16px);
 
         &-list {
             list-style: none;
             margin-top: 100px;
-        }
-
-        &-item {
-            padding: 20px 20px;
-            font-size: 20px;
-            color: white;
         }
     }
 }
@@ -60,4 +56,12 @@
     .header-nav__menu-btn {
         display: block;
     }
+}
+
+.header-divider {
+    position: absolute;
+    top: 50%;
+    right: 96%;
+    height: 1px;
+    width: calc(100vw - 766px - 160px);
 }
