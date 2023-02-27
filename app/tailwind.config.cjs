@@ -13,6 +13,7 @@ module.exports = {
 		fontFamily: {
 			font1: ['Bellefair', 'serif'],
 			font2: ['Barlow Condensed', 'sans-serif'],
+			font3: ['Barlow', 'sans-serif'],
 		},
 		extend: {
 			// backgroundImage: {

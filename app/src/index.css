@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&family=Barlow:wght@300;400&family=Bellefair&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
     .heading1 {
-        @apply font-font1 text-[150px] text-primary;
+        @apply font-font1 text-[82px] sm:text-[150px] text-primary;
     }
     .heading2 {
         @apply font-font1 text-[100px] text-primary;
@@ -17,7 +18,7 @@
         @apply font-font1 text-[32px] text-primary;
     }
     .heading5 {
-        @apply font-font2 text-[28px] tracking-wider  text-secondary;
+        @apply font-font2 text-[22px] sm:text-[26px] tracking-wider  text-secondary;
     }
     .subheading1 {
         @apply font-font1 text-[28px] text-primary;
@@ -27,5 +28,8 @@
     }
     .navtext {
         @apply font-font2 text-[18px] font-light tracking-widest text-primary;
+    }
+    .bodytext {
+        @apply font-font3 text-[15px] sm:text-[16.5px] lg:text-[18px] text-secondary;
     }
 }

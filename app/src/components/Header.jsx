@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 
 import './header.scss'
-// Mobile -> sm -> lg
 import logoIcon from '../assets/shared/logo.svg'
 
 const Header = () => {
@@ -60,9 +59,6 @@ const Header = () => {
                     </Link>
                 </div>
             </div>
-
-
-
         </div>
     );
 };
