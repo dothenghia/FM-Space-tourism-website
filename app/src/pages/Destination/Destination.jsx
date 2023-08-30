@@ -1,8 +1,12 @@
 
+import './destination.scss'
+
 const Destination = () => {
     return (
-        <div>
-            <h1>DESTINATION PAGE</h1>
+        <div id='destination'>
+            <div className=''>
+                
+            </div>
         </div>
     );
 };
